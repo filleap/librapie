@@ -142,17 +142,17 @@
 							$detailsCommande = "";
 							// On récupère les informations sur le livre commandé
 							$query = "SELECT* FROM ".$annee."_APIE_Livres WHERE EAN=".$listeLivresCommandes1[$i]->EAN;
-							$result = mysql_query($query) or die(mysql_error());
+							$result = $cnx->query($query) or die($cnx->error);
 
-							while ($row = mysql_fetch_object($result)) {
+							while ($row = mysqli_fetch_object($result)) {
 								$detailsLivre[] = $row;
 							}
 
 							// Pour chaque livre on compte le nombre de commandes
 							$query = "SELECT * FROM ".$annee."_APIE_Commandes WHERE EAN=".$listeLivresCommandes1[$i]->EAN." AND Periode='2'";
-							$result = mysql_query($query) or die(mysql_error());
+							$result = $cnx->query($query) or die($cnx->error);
 
-							while ($row = mysql_fetch_object($result)) {
+							while ($row = mysqli_fetch_object($result)) {
 								$detailsCommande[] = $row;
 							}
 							print("<td rowspan=".sizeof($detailsCommande)."><img width='50px' src='".$detailsLivre[0]->urlCouverture."'</td>");
@@ -171,9 +171,9 @@
 								}
 								// On récupère les informations sur la personne
 								$query = "SELECT * FROM APIE_Personnes WHERE id =".$detailsCommande[$j]->idPersonne;
-								$result = mysql_query($query) or die(mysql_error());
+								$result = $cnx->query($query) or die($cnx->error);
 
-								while ($row = mysql_fetch_object($result)) {
+								while ($row = mysqli_fetch_object($result)) {
 									$detailsPersonne[] = $row;
 								}
 								print("<td>".$detailsPersonne[0]->Nom." ".$detailsPersonne[0]->Prenom."</td>");
@@ -219,17 +219,17 @@
 							$detailsCommande = "";
 							// On récupère les informations sur le livre commandé
 							$query = "SELECT* FROM ".$annee."_APIE_Livres WHERE EAN=".$listeLivresCommandes2[$i]->EAN;
-							$result = mysql_query($query) or die(mysql_error());
+							$result = $cnx->query($query) or die($cnx->error);
 
-							while ($row = mysql_fetch_object($result)) {
+							while ($row = mysqli_fetch_object($result)) {
 								$detailsLivre[] = $row;
 							}
 
 							// Pour chaque livre on compte le nombre de commandes
 							$query = "SELECT * FROM ".$annee."_APIE_Commandes WHERE EAN=".$listeLivresCommandes2[$i]->EAN." AND Periode='1'";
-							$result = mysql_query($query) or die(mysql_error());
+							$result = $cnx->query($query) or die($cnx->error);
 
-							while ($row = mysql_fetch_object($result)) {
+							while ($row = mysqli_fetch_object($result)) {
 								$detailsCommande[] = $row;
 							}
 							print("<td rowspan=".sizeof($detailsCommande)."><img width='50px' src='".$detailsLivre[0]->urlCouverture."'</td>");
@@ -248,9 +248,9 @@
 								}
 								// On récupère les informations sur la personne
 								$query = "SELECT * FROM APIE_Personnes WHERE id =".$detailsCommande[$j]->idPersonne;
-								$result = mysql_query($query) or die(mysql_error());
+								$result = $cnx->query($query) or die($cnx->error);
 
-								while ($row = mysql_fetch_object($result)) {
+								while ($row = mysqli_fetch_object($result)) {
 									$detailsPersonne[] = $row;
 								}
 								print("<td>".$detailsPersonne[0]->Nom." ".$detailsPersonne[0]->Prenom."</td>");
