@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css">
-  <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<title>LibrAPIE - Livre ajouté</title>
  </head>
  <body>
@@ -76,7 +76,7 @@
             } else{
               $query = "SELECT * FROM ".$annee."_APIE_Livres WHERE EAN='$ean'";
             }
-            print_r($query);
+           
             $resultTestLivre = $cnx->query($query) or die($cnx->error);
 
             while ($row = mysqli_fetch_object($resultTestLivre)) {

@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css">
-  <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<title>LibrAPIE - Commande prise en compte</title>
  </head>
  <body>
