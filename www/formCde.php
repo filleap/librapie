@@ -10,8 +10,16 @@
 
 	if($session){
 		$idPersonne = $_GET['id'];
-		// $annee = $_GET['annee'];
-		$annee = '2019';
+		
+		$annee = $_GET['annee'];
+
+		if ($annee == "") {
+		// positionnement de l'année courante
+			// $date = getdate();
+			// $annee = $date[year];
+			$annee = "2021";
+		}
+
 		$total = 0;
 
 		// Connexion a la base de donnees
