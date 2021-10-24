@@ -5,7 +5,7 @@ librapie_database:
   # ports:
   #   - "8006:3306"
   volumes:
-    - /home/fifou/Developpement/github/librAPIE/mysql:/var/lib/mysql
+    - ~/Developpement/github/librAPIE/mysql:/var/lib/mysql
   environment:
     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     - MYSQL_DATABASE=${w9vhoru3_bibliapie}
@@ -29,7 +29,7 @@ librairie:
   ports:
     - "84:80"
   volumes:
-    - /home/fifou/Developpement/github/librAPIE/www:/var/www/html
+    - ~/Developpement/github/librAPIE/www:/var/www/html
   links:
     - librapie_database
   net: "bridge"
