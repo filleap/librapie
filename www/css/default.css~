@@ -1,0 +1,10 @@
+body {
+        font-family:sans-serif;
+	font-size:1em;	
+}
+
+h1 {
+        margin-top:0.6em;
+        color:#000;
+        font-size:2em;
+}

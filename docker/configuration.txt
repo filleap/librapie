@@ -1,0 +1,11 @@
+# Instruction de configuration de la plateforme librAPIE
+
+## Lancement
+
+La plateforme repose sur trois serveurs :
+
+  * un serveur apache/php pour les parties rendues et applications (sur le port 80)
+  * un serveur mysql pour le stockage des données (sur le port 3306)
+  * un serveur phpmyadmin pour l'outil de gestion de la base de données (sur le port 8080)
+
+Cet environnement est lancé en utilisant la commande ```docker-compose up``` qui repose sur le fichier ```docker-compose.yml```.
