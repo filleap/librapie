@@ -80,7 +80,7 @@
 		<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	  <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css">
 		<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-	  <script type="text/javascript" src="./jslib/jquery.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 	  <script type="text/javascript" src="./jslib/utilBibli.js"></script>
     <title>LibrAPIE - Mise à jour</title>
     <body>

@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="./bootstrap-3.3.5-dist/css/bootstrap.min.css">
 	<!-- <link rel="stylesheet" href="css/default.css"/> -->
-  <script type="text/javascript" src="./jslib/jquery.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
   <script type="text/javascript" src="./jslib/utilBibli.js"></script>
   <script src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
 	<title>LibrAPIE - Page de connexion</title>

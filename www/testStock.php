@@ -62,7 +62,7 @@
 	  <!-- <link rel="stylesheet" media="print" href="css/print.css">
 	  <link rel="stylesheet" href="./css/tableau.css"> -->
 		<script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.js"></script>
-	  <script type="text/javascript" src="./jslib/jquery.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 	  <script type="text/javascript" src="./jslib/utilBibli.js"></script>
     <script type="text/javascript" src="./jslib/tablesort.js"></script>
 		<script type="text/javascript">
