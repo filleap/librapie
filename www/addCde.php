@@ -1,6 +1,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en_FR" xml:lang="en_FR">
  <head>
+  <meta http-equiv="refresh" content="2 ; url=index.php"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />

@@ -133,7 +133,7 @@
 							<th>Couverture</th>
 							<th>ISBN</th>
 							<th class="sortable-text">Titre</th>
-							<th>Qté</th>
+							<th>Stock</th>
 							<th>Cdé</th>
 							<th width="90px">Prix</th>
 							<th>Rendu</th>
@@ -166,23 +166,25 @@
 								print("<td align='center'><img width='50px' src='".$listeLivres[$i]->urlCouverture."'></td>");
 								print("<td>".$listeLivres[$i]->EAN."</td>");
 								print("<td>".$listeLivres[$i]->Titre."</td>");
-								print("<td>".$listeLivres[$i]->Qte."</td>");
 								$qteStock = $listeLivres[$i]->Qte;
+								//Stock
+								if($qteStock == 0){
+									print("<td>".$listeLivres[$i]->Qte."</td>");
+								} elseif($qteStock >= $qteCdee){
+									print("<td align='center'><span class='glyphicon glyphicon-ok' style='color:green'><br>stock-".$qteStock."</span></td>");
+								} elseif($qteStock < $qteCdee){
+									print("<td align='center'><span class='glyphicon glyphicon-remove' style='color:red'><br>stock-".$qteStock."</span></td>");
+								}
+								// Commandé
 								if($listeLivres[$i]->Cde){
-									print("<td align='center'><span class='glyphicon glyphicon-ok' style='color:green'><br>cde".$listeLivres[$i]->QteCdee."</span></td>");
-								} else{
-									if($qteCdee != 0){
-										if($listeLivres[$i]->Qte <= 0 || $listeLivres[$i]->Qte < $qteCdee){
-											print("<td align='center'><span class='glyphicon glyphicon-remove' style='color:red'><br>cde</span></td>");
-										} elseif($listeLivres[$i]->Qte == $qteCdee){
-											print("<td align='center'><span class='glyphicon glyphicon-warning-sign' style='color:orange'><br>Stock0</span></td>");
-										}else{
-											print("<td align='center'><strike>Cdé</strike></td>");
-										}
-									}else{
-										print("<td align='center'><strike>Cdé</strike></td>");
-										$livreArendre = $livreArendre + $qteStock;
+									if($qteStock+$listeLivres[$i]->QteCdee >= $qteCdee){
+										print("<td align='center'><span class='glyphicon glyphicon-ok' style='color:green'><br>cdé-".$listeLivres[$i]->QteCdee."</span></td>");
+									} elseif($qteStock+$listeLivres[$i]->QteCdee <= 0 || $qteStock+$listeLivres[$i]->QteCdee < $qteCdee){
+										print("<td align='center'><span class='glyphicon glyphicon-remove' style='color:red'><br>cdé-".$listeLivres[$i]->QteCdee."</span></td>");
 									}
+								} else {
+									print("<td align='center'><strike>Cdé</strike></td>");
+									$livreArendre = $livreArendre + $qteStock;
 								}
 								print("<td>".number_format($listeLivres[$i]->Prix, 2, ',', '')." €</td>");
 								$prixLivre = $listeLivres[$i]->Prix;

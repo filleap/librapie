@@ -158,14 +158,7 @@ function suppLivre(id, annee) {
 		}
 	}
 
-	if (document.getElementById('supp_'+id).checked) {
-		var msg = "Voulez vous vraiment supprimer ce livre ?";
-	}
-	else {
-		var msg = "Voulez vous vraiment remettre ce livre dans la liste ?";
-	}
-
-	if (confirm(msg)){
+	if (confirm("Voulez vous vraiment supprimer ce livre ?")){
 		xhr_object.open("POST", "suppLivre.php", true);
 		xhr_object.onreadystatechange = function(){
 			if (xhr_object.readyState == 4) {

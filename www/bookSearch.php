@@ -56,7 +56,7 @@
 					}
 				?>" alt="Pas de couverture disponible"/>
 			</div>
-			<div class="col-sm-10">
+			<div class="col-sm-4">
 			 	<form action="addBook.php" method="post">
 					 <input type="hidden" name="Annee" id="Annee" value="<?php echo($annee) ?>">
 					<p><b>Titre :</b> <?php
@@ -160,6 +160,10 @@
 						<span class="glyphicon glyphicon-home"></span>
 					</button>
 			 	</form>
+			</div>
+			<div class="col-sm-6">
+				<p><b>Description</b></p>
+				<p><?php print($book->volumeInfo->description)?></p>
 			</div>
 		</div>
 	</div>

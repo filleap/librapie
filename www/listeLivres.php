@@ -171,7 +171,7 @@
 							print("<td align='center'>".$listeLivres[$i]->Categorie."</td>");
 							print("<td>".number_format($listeLivres[$i]->Prix, 2, ',', '')." €</td>");
 							print("<td align='center'><input type='checkbox' id='sel_".$listeLivres[$i]->id."' ".$sel." onclick='selLivre(".$listeLivres[$i]->id.");'></td>");
-							print("<td align='center'><input type='checkbox' id='supp_".$listeLivres[$i]->id."' ".$supp." onclick='suppLivre(".$listeLivres[$i]->id.", ".$annee.");'></td>");
+							print("<td align='center'><span class='glyphicon glyphicon-trash' onclick='suppLivre(".$listeLivres[$i]->id.", ".$annee.");'></span></td>");
 							print("</tr>");
 						}
 					?>
