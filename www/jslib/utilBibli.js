@@ -1,3 +1,35 @@
+function verifUser(){
+	var pseudo = document.getElementById('pseudo').value;
+	var pass = document.getElementById('pass').value;
+	var xhr_object = null;
+	if (window.XMLHttpRequest){
+		// Firefox
+		xhr_object = new XMLHttpRequest();
+	}
+	else {
+		if (window.ActiveXObject) // Internet Explorer
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");
+		else { // XMLHttpRequest non support� par le navigateur
+			alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+			return;
+		}
+	}
+	xhr_object.open("POST", "verifCnx.php", true);
+	xhr_object.onreadystatechange = function(){
+		if (xhr_object.readyState == 4) {
+			if (xhr_object.responseText == "ok") {
+				window.location = "index.php";
+			}
+			else{
+				alert(xhr_object.responseText);
+			}
+		}
+	}
+	xhr_object.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	var data="pseudo="+pseudo+"&pass="+pass;
+	xhr_object.send(data);
+}
+
 function choixAnnee(){
     $("#btnChoixAnnee").click();
 }

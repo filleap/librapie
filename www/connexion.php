@@ -29,8 +29,8 @@
 				 <br>
 				 mot de passe <input type="password" id="pass" name="pass">
 				 <br>
-				 <button title="valider" type="submit" class="btn btn-default">
-					 valider
+				 <button title="valider" type="button" onclick="verifUser()" class="btn btn-default">
+					valider
 				 </button>
 			 </form>
 		 </div>

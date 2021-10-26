@@ -29,9 +29,6 @@
     session_start();
     $_SESSION['id'] = $membres[0]->id;
     $_SESSION['pseudo'] = $pseudo;
+    print("ok");
   }
-
-  // redirection vers page principale
-  header('Location: index.php');
-  exit();
 ?>
