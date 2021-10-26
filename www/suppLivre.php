@@ -41,9 +41,8 @@
 				if($result = $cnx->query($query))
 					print("ok");
 			}
-		}
-		else
-			print("erreur !");
+		} else
+			print("commande");
 	}
 	// else{
 	// 	$suppr = 0;

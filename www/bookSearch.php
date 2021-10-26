@@ -17,10 +17,8 @@
 		if($isbn != "") {
 			$searchResult = file_get_contents($urlSearch);
 			if($searchResult != null){
-				$jsonSearch = json_decode($searchResult);
+				$book = json_decode($searchResult);
 				// var_dump($jsonSearch);
-				$book = $jsonSearch;
-				// var_dump($items);
 				// var_dump("info: ".$items[0]->volumeInfo->industryIdentifiers[1]->identifier);
 			}
 		}
@@ -68,7 +66,7 @@
 						print ($book->volumeInfo->title);
 						//if ($book->volumeInfo->subtitle != "")
 						//	print(" (" .$book->volumeInfo->subtitle. ")");
-						print("<input type='hidden' class='text' name='Titre' id='Titre' value='".$book->volumeInfo->title."'>");
+						print('<input type="hidden" class="text" name="Titre" id="Titre" value="'.$book->volumeInfo->title.'">');
 						print("</p>");
 						}
 					?>
@@ -111,7 +109,7 @@
 								}
 							}
 							print("</p>");
-						 	print("<input type='hidden' class='text' name='Auteur' id='Auteur' value=");
+						 	print('<input type="hidden" class="text" name="Auteur" id="Auteur" value="');
 							for ($i = 0; $i < sizeof($book->volumeInfo->authors); $i++){
 								if(sizeof($book->volumeInfo->authors) == 1) {
 									print($book->volumeInfo->authors[$i]);
@@ -119,11 +117,11 @@
 									if($i == sizeof($book->volumeInfo->authors)-1){
 										print($book->volumeInfo->authors[$i]);
 									} else {
-										print($book->volumeInfo->authors[$i]." ; ");
+										print($book->volumeInfo->authors[$i].' ; ');
 									}
 								}
 							}
-							print(">");
+							print('">');
 						}
 					?>
 					 <p><b>Editeur :</b> <?php
@@ -132,7 +130,7 @@
 						} else {
 							echo($book->volumeInfo->publisher);
 							print("</p>");
-							print("<input type='hidden' class='text' name='Editeur' id='Editeur' value=".$book->volumeInfo->publisher.">");
+							print('<input type="hidden" class="text" name="Editeur" id="Editeur" value="'.$book->volumeInfo->publisher.'">');
 						}
 					?>
 					<?php

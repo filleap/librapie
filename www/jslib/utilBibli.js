@@ -172,8 +172,8 @@ function suppLivre(id, annee) {
 				if (xhr_object.responseText == "ok") {
 					window.location = "index.php";
 				}
-				else{
-					alert("Impossible de supprimer le livre.");
+				else if (xhr_object.responseText == "commande"){
+					alert("Impossible de supprimer ce livre,\nune commande est en cours.");
 				}
 			}
 		}

@@ -27,9 +27,9 @@
         $url = $_POST['URL'];
         $isbn = $_POST['ISBN'];
         $ean = $_POST['EAN'];
-        $titre = $_POST['Titre'];
-        $auteur = $_POST['Auteur'];
-        $editeur = $_POST['Editeur'];
+        $titre = addslashes($_POST['Titre']);
+        $auteur = addslashes($_POST['Auteur']);
+        $editeur = addslashes($_POST['Editeur']);
         $prix = $_POST['Prix'];
         $categorie = $_POST['Categorie'];
         $choix = $_POST['Choix'];
@@ -37,7 +37,7 @@
 
         if($ean <> ""){
           if($prix <> ""){
-            //mysql_query("SET NAMES UTF8");
+            // mysql_query("SET NAMES UTF8");
 
             if($sel == "on")
             	$sel = 1;
@@ -50,10 +50,6 @@
               // $annee = $date[year];
               $annee = "2021";
             }
-
-            $titre = addslashes($titre);
-            $auteur = addslashes($auteur);
-            $editeur = addslashes($editeur);
 
             // Connexion a la base de donnees
             include("dbconf.php");
