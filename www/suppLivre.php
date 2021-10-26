@@ -29,16 +29,31 @@
 	}
 	if($livre->Suppr == 0){
 		$suppr = 1;
-		// TODO suppirmer le livre du stock
+		// vérification que le livre n'est pas dans une commande
+		$query = "SELECT * FROM ".$annee."_APIE_Commandes WHERE EAN='$livre->EAN'";
+		$result = $cnx->query($query) or die ($cnx->error); 
+		if($result->num_rows == 0){
+			// suppression du livre
+			$query = "DELETE FROM ".$annee."_APIE_Livres WHERE id='$id'";
+			if($result = $cnx->query($query)){
+				// TODO suppirmer le livre du stock
+				$query = "DELETE FROM ".$annee."_APIE_Stock_Livres WHERE EAN='$livre->EAN'";
+				if($result = $cnx->query($query))
+					print("ok");
+			}
+		}
+		else
+			print("erreur !");
 	}
-	else{
-		$suppr = 0;
-		// TODO ajouter le livre au stock
-	}
+	// else{
+	// 	$suppr = 0;
+	// 	$query = "UPDATE ".$annee."_APIE_Livres SET Suppr='$suppr' WHERE id='$id'";
+	// 	if ($result = $cnx->query($query)){
+	// 		// TODO suppirmer le livre du stock
+	// 		print("ok");
+	// 	}
+	// 	else
+	// 		print("erreur !");
+	// }
 
-	$query = "UPDATE ".$annee."_APIE_Livres SET Suppr='$suppr' WHERE id='$id'";
-	if ($result = $cnx->query($query))
-		print("ok");
-	else
-		print("erreur !");
 ?>

@@ -140,6 +140,9 @@ function suppLivre(id, annee) {
 				if (xhr_object.responseText == "ok") {
 					window.location = "index.php";
 				}
+				else{
+					alert("Impossible de supprimer le livre.");
+				}
 			}
 		}
 		xhr_object.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
