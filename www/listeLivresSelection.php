@@ -65,19 +65,22 @@
   </head>
   <body>
 		<div class="container" id="content" class="content">
-	 		<div class="page-header" id="entete-APIE">
-	 			<div class="row">
-	 				<div class="col-sm-2">
-	 					<a href="index.php">
-	 						<img height="100px" src="./Logo_APIE.gif"/>
-	 					</a>
-	 				</div>
-	 				<div class="col-sm-10">
-						<h1>Bienvenue dans librAPIE <?php print($_SESSION['pseudo']); ?></h1>
-	 					<caption>la bibliothèque du marché de Noël</caption>
-	 				</div>
-	 			</div>
-	 		</div>
+		<div class="page-header">
+			<div class="row">
+				<div class="col-sm-2">
+					<a href="index.php">
+						<img height="100px" src="./sapin-noel.png"/>
+					</a>
+				</div>
+				<div class="col-sm-8">
+					<h1>Bienvenue dans librAPIE <?php print($_SESSION['pseudo']); ?></h1>
+					<caption>la bibliothèque du marché de Noël</caption>
+				</div>
+				<div class="col-sm-2">
+						<img height="100px" src="./Logo_APIE.gif"/>
+				</div>
+			</div>
+		</div>
 			<?php
 				if(!$session){
 					print("<div id='warning' class='row'>");
