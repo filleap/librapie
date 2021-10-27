@@ -36,12 +36,15 @@
 			<div class="row">
 				<div class="col-sm-2">
 					<a href="index.php">
-						<img height="100px" src="./Logo_APIE.gif"/>
+						<img height="100px" src="./sapin-noel.png"/>
 					</a>
 				</div>
-				<div class="col-sm-10">
+				<div class="col-sm-8">
 					<h1>Bienvenue dans librAPIE <?php print($_SESSION['pseudo']); ?></h1>
 					<caption>la bibliothèque du marché de Noël</caption>
+				</div>
+				<div class="col-sm-2">
+						<img height="100px" src="./Logo_APIE.gif"/>
 				</div>
 			</div>
 		</div>
