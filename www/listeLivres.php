@@ -63,7 +63,7 @@
 				}
 			?>
 				<div class="col-sm-4">
-					<img src="Cadenas.png">
+					<img src="images/Cadenas.png">
 				</div>
 				<div class="col-sm-8">
 					<h2>Vous n'êtes pas autorisé à accéder à cette page.</h2>
