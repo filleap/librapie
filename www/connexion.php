@@ -15,7 +15,7 @@
 		 <div class="page-header">
 			 <div class="row">
 				 <div class="col-sm-2">
-					 <img height="100px" src="./Logo_APIE.gif"/>
+					 <img height="100px" src="./images/Logo_APIE.gif"/>
 				 </div>
 				 <div class="col-sm-10">
 					 <h1>Bienvenue dans librAPIE</h1>

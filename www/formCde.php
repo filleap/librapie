@@ -72,7 +72,7 @@
 	 <div class="page-header" id="entete-APIE">
 		 <div class="row">
 			 <div class="col-sm-2">
-				 <img src="./Logo_APIE.gif"/>
+				 <img src="./images/Logo_APIE.gif"/>
 			 </div>
 			 <div class="col-sm-8">
 				 <h1>Bienvenue dans librAPIE <?php print($_SESSION['pseudo']); ?></h1>

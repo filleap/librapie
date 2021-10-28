@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-sm-2">
 					<a href="index.php">
-						<img height="100px" src="./Logo_APIE.gif"/>
+						<img height="100px" src="./images/Logo_APIE.gif"/>
 					</a>
 				</div>
 				<div class="col-sm-10">
