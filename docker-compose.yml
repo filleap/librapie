@@ -8,7 +8,7 @@ librapie_database:
     - ~/Developpement/github/librAPIE/mysql:/var/lib/mysql
   environment:
     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    - MYSQL_DATABASE=${w9vhoru3_bibliapie}
+    - MYSQL_DATABASE=${MYSQL_DATABASE}
     - MYSQL_USER=${MYSQL_USER}
     - MYSQL_PASSWORD=$MYSQL_PASSWORD}
 
