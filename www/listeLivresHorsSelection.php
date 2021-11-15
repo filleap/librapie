@@ -63,7 +63,7 @@
   </head>
   <body>
 		<div class="container" id="content" class="content">
-		<div class="page-header">
+		<div id="entete-APIE" class="page-header">
 			<div class="row">
 				<div class="col-sm-2">
 					<a href="index.php">
@@ -146,7 +146,7 @@
 									$sel = "checked";
 								}
 								print("<td>".$listeLivres[$i]->Choix."</td>");
-								print("<td align='center'><img src='".$listeLivres[$i]->urlCouverture."'></td>");
+								print("<td align='center'><img height='100' src='".$listeLivres[$i]->urlCouverture."'></td>");
 								print("<td>".$listeLivres[$i]->EAN."</td>");
 								print("<td>".$listeLivres[$i]->Titre."</td>");
 								print("<td>".$listeLivres[$i]->Auteur."</td>");
