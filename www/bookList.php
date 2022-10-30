@@ -32,7 +32,7 @@ while ($row = mysql_fetch_object($result)) {
 }
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en_FR" xml:lang="en_FR">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr_FR" xml:lang="fr_FR">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
