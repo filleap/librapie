@@ -53,7 +53,7 @@
             // positionnement de l'année courante
               // $date = getdate();
               // $annee = $date[year];
-              $annee = "2021";
+              $annee = "2022";
             }
 
             // Connexion a la base de donnees

@@ -1,6 +1,6 @@
 <?php
 $id = $_POST['id'];
-$annee = "2021";
+$annee = "2022";
 
 // Connexion a la base de donnees
 include("dbconf.php");

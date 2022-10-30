@@ -11,7 +11,7 @@ if ($annee == "") {
 // positionnement de l'année courante
 	// $date = getdate();
 	// $annee = $date[year];
-	$annee = "2021";
+	$annee = "2022";
 }
 
 $cpt = 0;

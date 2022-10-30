@@ -9,12 +9,16 @@
 	}
 
 	if($session){
-		$baseURL = "https://www.googleapis.com/books/v1/volumes?q=";
 		$keywords = urlencode($_POST['Keywords']);
-
-		$urlSearch = $baseURL.$keywords;
+		
 		// var_dump($urlSearch);
 		if($keywords != ""){
+			if(is_numeric($keywords)) {
+				$baseURL = "https://www.googleapis.com/books/v1/volumes?q=isbn:";
+			} else {
+				$baseURL = "https://www.googleapis.com/books/v1/volumes?q=";
+			}
+			$urlSearch = $baseURL.$keywords."&key=AIzaSyCAn78Zmia4f6N13vOkhq7CO8iyOaBpIbI";
 			$searchResult = file_get_contents($urlSearch);
 	
 			if($searchResult != null){

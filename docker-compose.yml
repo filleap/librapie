@@ -1,38 +1,40 @@
-# librAPIE
-librapie_database:
-  image: mysql:5.5
-  container_name: librapie_database
-  # ports:
-  #   - "8006:3306"
-  volumes:
-    - ~/Developpement/github/librAPIE/mysql:/var/lib/mysql
-  environment:
-    - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    - MYSQL_DATABASE=${MYSQL_DATABASE}
-    - MYSQL_USER=${MYSQL_USER}
-    - MYSQL_PASSWORD=$MYSQL_PASSWORD}
+version: '3.0'
+services:
+  # librAPIE
+  librapie_database:
+    image: mysql:5.5
+    container_name: librapie_database
+    # ports:
+    #   - "8006:3306"
+    volumes:
+      - ~/Development/github/librAPIE/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=$MYSQL_PASSWORD}
 
-phpmyadmin:
-  image: phpmyadmin/phpmyadmin
-  container_name: phpmyadmin
-  ports:
-    - "8080:80"
-  environment:
-    - PMA_HOST=librapie_database
-    - PMA_PORT=3306
-  links:
-    - librapie_database
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_HOST=librapie_database
+      - PMA_PORT=3306
+    links:
+      - librapie_database
 
-librairie:
-  build: docker/site
-  container_name: librapie_librairie
-  ports:
-    - "84:80"
-  volumes:
-    - ~/Developpement/github/librAPIE/www:/var/www/html
-  links:
-    - librapie_database
-  net: "bridge"
-  dns:
-    - 8.8.8.8
-    - 4.4.4.4
+  librairie:
+    build: docker/site
+    container_name: librapie_librairie
+    ports:
+      - "84:80"
+    volumes:
+      - ~/Development/github/librAPIE/www:/var/www/html
+    links:
+      - librapie_database
+    # net: "bridge"
+    dns:
+      - 8.8.8.8
+      - 4.4.4.4

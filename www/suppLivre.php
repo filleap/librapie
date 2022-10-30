@@ -11,7 +11,7 @@
 	// positionnement de l'année courante
 		// $date = getdate();
 		// $annee = $date[year];
-		$annee = "2021";
+		$annee = "2022";
 	}
 
 	// $cnx = mysql_connect($host, $user, $mdp) or die("Connexion a mysql impossible : " . mysql_errno());

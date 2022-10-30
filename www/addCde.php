@@ -32,7 +32,7 @@
       // positionnement de l'année courante
       // $date = getdate();
       // $annee = $date[year];
-      $annee = "2021";
+      $annee = "2022";
       $periode = "1";
 
       // Recuperation des parametres
