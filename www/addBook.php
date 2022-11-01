@@ -100,7 +100,7 @@
             }
             else{
             	$request = "INSERT INTO ".$annee."_APIE_Livres (ISBN, EAN, urlCouverture, Titre, Auteur, Editeur, Prix, Categorie, Choix, Sel) VALUES ('$isbn', '$ean', '$url', '$titre', '$auteur', '$editeur', $prix, '$categorie', '$choix', '$sel')";
-            	// print_r($request);
+            	// var_dump($request);
             	$result = $cnx->query($request) or die($cnx->error);
 
             	// ajout de 1 exemplaire en stock par défaut

@@ -11,6 +11,7 @@
 	if($session){
 		$idLivre = $_POST['idLivre'];
 		$annee = addslashes($_POST['Annee']);
+		$urlCouv = $_POST['Couverture'];
 		$ean = addslashes($_POST['EAN']);
 		$choix = addslashes($_POST['Choix']);
 		$titre = addslashes($_POST['Titre']);
@@ -58,7 +59,7 @@
 	mysqli_select_db($cnx,$bdd);
 
 	// Mise à jour des information sur le livre
-	$query = "UPDATE ".$annee."_APIE_Livres SET Choix='$choix', Titre='$titre', Auteur='$auteur', Editeur='$editeur', Prix='$prix', Categorie='$categorie' WHERE EAN='$ean'";
+	$query = "UPDATE ".$annee."_APIE_Livres SET Choix='$choix', Titre='$titre', urlCouverture='$urlCouv', Auteur='$auteur', Editeur='$editeur', Prix='$prix', Categorie='$categorie' WHERE EAN='$ean'";
 
     if ($result = $cnx->query($query)){
 			// Mise à jour de la quantité dans le stock

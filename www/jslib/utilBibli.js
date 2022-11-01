@@ -400,6 +400,7 @@ function qteLivre(id) {
 
 function editLivre(ean, annee){
   $('#modale').show();
+  $('#urlCouv').hide();
   // interrogation base de données
   if (window.XMLHttpRequest) // Firefox
       xhr_object = new XMLHttpRequest();
@@ -421,6 +422,7 @@ function editLivre(ean, annee){
         console.error("Erreur : "+e);
 	  }
       $('#urlCouverture').attr('src', livre.urlCouverture);
+	  $('#Couverture').val(livre.urlCouverture);
       $("#Choix").val(livre.Choix);
       $('#EAN').val(livre.EAN);
       $("#Titre").val(livre.Titre);

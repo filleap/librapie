@@ -214,7 +214,8 @@
 						<form action="majBook.php" method="POST">
 							<input type="text" id="Annee" name="Annee" value="<?php print($annee); ?>" hidden>
 							<div class="col-sm-4">
-								<img width="100px;" id="urlCouverture" name="urlCouverture" src="">
+								<img width="100px;" id="urlCouverture" name="urlCouverture" src="" onclick="$('#urlCouv').show();">
+								<p id="urlCouv" hidden>Couverture : <input type="text" id="Couverture" name="Couverture" value=""></p>
 							</div>
 							<div class="col-sm-8">
 								<p>Choix : <input type="text" id="Choix" name="Choix" value=""></p>
