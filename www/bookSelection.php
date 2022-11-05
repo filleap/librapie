@@ -14,19 +14,20 @@
 		// var_dump($urlSearch);
 		if($keywords != ""){
 			if(is_numeric($keywords)) {
-				$baseURL = "https://www.googleapis.com/books/v1/volumes?q=isbn:";
+				// $baseURL = "https://www.googleapis.com/books/v1/volumes?q=isbn:";
+				header('Location: ' . 'bookSearchLP.php?&bookId='.$keywords, true, $statusCode);
 			} else {
 				$baseURL = "https://www.googleapis.com/books/v1/volumes?q=";
-			}
-			$urlSearch = $baseURL.$keywords."&key=AIzaSyCAn78Zmia4f6N13vOkhq7CO8iyOaBpIbI";
-			$searchResult = file_get_contents($urlSearch);
-	
-			if($searchResult != null){
-				$jsonSearch = json_decode($searchResult);
-				// var_dump($jsonSearch);
-				$items = $jsonSearch->items;
-				// var_dump($items);
-				// var_dump("info: ".$items[0]->volumeInfo->industryIdentifiers[1]->identifier);
+				$urlSearch = $baseURL.$keywords."&key=AIzaSyCAn78Zmia4f6N13vOkhq7CO8iyOaBpIbI";
+				$searchResult = file_get_contents($urlSearch);
+		
+				if($searchResult != null){
+					$jsonSearch = json_decode($searchResult);
+					// var_dump($jsonSearch);
+					$items = $jsonSearch->items;
+					// var_dump($items);
+					// var_dump("info: ".$items[0]->volumeInfo->industryIdentifiers[1]->identifier);
+				}
 			}
 		}
 	}

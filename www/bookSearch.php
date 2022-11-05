@@ -140,7 +140,9 @@
 					?>
 					<?php
 						$prix = explode(" ",$xml->Items->Item->Offers->Offer->OfferListing->Price->FormattedPrice)[1];
-						$prix_float = str_replace(",", ".", $prix);
+						if ($prix_float == 0.0) {
+							$prix_float = str_replace(",", ".", $prix);
+						}
 					?>
 			 		<p><b>Prix de vente :</b> <input type="text" name="Prix" id="Prix" value="<?php echo($prix_float); ?>"/></p>
 			 		<p><b>Catégorie :</b>
