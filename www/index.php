@@ -78,7 +78,7 @@
 				<div class="col-sm-8">
 			 		<h2>Ajout de livres</h2>
 					Entrez un nom de livre ou un num&eacute;ro ISBN
-			 		<form action="bookSelection.php" method="POST">
+			 		<form action="bookSelectionLP.php" method="POST">
 				 		<input type="text" size="40" name="Keywords" id="Keywords"/>
 						<button title="rechercher" type="submit" class="btn btn-default">
 							<span class="glyphicon glyphicon-search"></span>

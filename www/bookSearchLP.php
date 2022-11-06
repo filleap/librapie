@@ -90,10 +90,7 @@
 		$title = $json_response->products->list[0]->name;
 		$ean = $json_response->products->list[0]->ean;
 		$prix_float = $json_response->products->list[0]->price->withTax;
-		// $items[0]->volumeInfo->title = $json_response->products->list[0]->name;
-		// $items[0]->volumeInfo->authors[0] = $json_response->products->list[0]->productAttributes[1]->value[0]->name;
-		// $items[0]->id = $json_response->products->list[0]->ean;
-
+		
 		curl_close($curl);
 	}
 ?>
