@@ -29,20 +29,25 @@
 	}
 	if($livre->Suppr == 0){
 		$suppr = 1;
-		// vérification que le livre n'est pas dans une commande
-		$query = "SELECT * FROM ".$annee."_APIE_Commandes WHERE EAN='$livre->EAN'";
-		$result = $cnx->query($query) or die ($cnx->error); 
-		if($result->num_rows == 0){
-			// suppression du livre
-			$query = "DELETE FROM ".$annee."_APIE_Livres WHERE id='$id'";
-			if($result = $cnx->query($query)){
-				// TODO suppirmer le livre du stock
-				$query = "DELETE FROM ".$annee."_APIE_Stock_Livres WHERE EAN='$livre->EAN'";
-				if($result = $cnx->query($query))
-					print("ok");
-			}
-		} else
+		// verification que le livre n'a pas ete commande a la Procure (en cours de livraison)
+		if ($livre->Sel == 0) {
+			// vérification que le livre n'est pas dans une commande
+			$query = "SELECT * FROM ".$annee."_APIE_Commandes WHERE EAN='$livre->EAN'";
+			$result = $cnx->query($query) or die ($cnx->error); 
+			if($result->num_rows == 0){
+				// suppression du livre
+				$query = "DELETE FROM ".$annee."_APIE_Livres WHERE id='$id'";
+				if($result = $cnx->query($query)){
+					// suppression du livre du stock
+					$query = "DELETE FROM ".$annee."_APIE_Stock_Livres WHERE EAN='$livre->EAN'";
+					if($result = $cnx->query($query))
+						print("ok");
+				}
+			} else
+				print("commande");
+		} else {
 			print("commande");
+		}
 	}
 	// else{
 	// 	$suppr = 0;
