@@ -75,7 +75,7 @@
 				print("<div class='row'>");
 			}
 		?>
-				<div class="col-sm-8">
+				<div class="col-sm-6">
 			 		<h2>Ajout de livres</h2>
 					Entrez un nom de livre ou un num&eacute;ro ISBN
 			 		<form action="bookSelectionLP.php" method="POST">
@@ -99,6 +99,12 @@
 					<a href="bookStock.php">
 						<h3>Gestion du stock</h3>
 						<img src="./images/pile-de-livres.jpg" height="70px">
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="ventes.php">
+						<h3>Résultat des ventes</h3>
+						<img src="./images/ventes.webp" height="70px">
 					</a>
 				</div>
 		</div>
