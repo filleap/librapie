@@ -129,7 +129,7 @@
 					<th>Editeur</th>
 					<th class='sortable-text'>Cat.</th>
 					<th width="90px">Prix</th>
-					<th>Cdé</th>
+					<th>Sel</th>
 					<th>Suppr</th>
 					</tr>
 					<?php
@@ -170,7 +170,7 @@
 							print("<td>".$listeLivres[$i]->Editeur."</td>");
 							print("<td align='center'>".$listeLivres[$i]->Categorie."</td>");
 							print("<td>".number_format($listeLivres[$i]->Prix, 2, ',', '')." €</td>");
-							print("<td align='center'><input type='checkbox' id='sel_".$listeLivres[$i]->id."' ".$sel."></td>");
+							print("<td align='center'><input type='checkbox' id='sel_".$listeLivres[$i]->id."' ".$sel." onclick='selLivre(".$listeLivres[$i]->id.");'></td>");
 							print("<td align='center'><span class='glyphicon glyphicon-trash' onclick='suppLivre(".$listeLivres[$i]->id.", ".$annee.");'></span></td>");
 							print("</tr>");
 						}
